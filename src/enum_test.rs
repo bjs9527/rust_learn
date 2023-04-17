@@ -1,4 +1,4 @@
-#[derive(PartialEq, Eq, PartialOrd, Ord,Debug)]
+#[derive(PartialEq, Eq, PartialOrd, Ord, Debug)]
 pub enum Message {
     Quit,
     Move { x: i32, y: i32 },
@@ -11,7 +11,13 @@ pub mod tests {
 
     #[test]
     fn test_message() {
-        let msg = Message::Quit;
-        assert_eq!(msg, Message::Quit);
+        let msg_quit = Message::Quit;
+        let msg_move = Message::Move { x: 1, y: 2 };
+        let msg_write = Message::Write("hello".to_string());
+        let msg_change_color = Message::ChangeColor(0, 0, 0);
+        assert_eq!(msg_quit, Message::Quit);
+        assert_eq!(msg_move, Message::Move { x: 1, y: 2 });
+        assert_eq!(msg_write, Message::Write("hello".to_string()));
+        assert_eq!(msg_change_color, Message::ChangeColor(0,0,0));
     }
 }
