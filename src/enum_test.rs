@@ -18,6 +18,13 @@ pub mod tests {
         assert_eq!(msg_quit, Message::Quit);
         assert_eq!(msg_move, Message::Move { x: 1, y: 2 });
         assert_eq!(msg_write, Message::Write("hello".to_string()));
-        assert_eq!(msg_change_color, Message::ChangeColor(0,0,0));
+        assert_eq!(msg_change_color, Message::ChangeColor(0, 0, 0));
+    }
+
+    #[test]
+    fn test_option() {
+        let mut o = Option::Some(5);
+        o = Some(o.unwrap() + 1);
+        assert_eq!(o, Some(6));
     }
 }
