@@ -1,3 +1,4 @@
+#[derive(PartialEq, Eq, PartialOrd, Ord,Debug)]
 pub enum Message {
     Quit,
     Move { x: i32, y: i32 },
@@ -6,8 +7,11 @@ pub enum Message {
 }
 #[cfg(test)]
 pub mod tests {
+    use super::Message;
+
     #[test]
     fn test_message() {
-        assert_eq!(1, 1);
+        let msg = Message::Quit;
+        assert_eq!(msg, Message::Quit);
     }
 }
