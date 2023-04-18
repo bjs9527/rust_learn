@@ -29,7 +29,7 @@ mod tests {
     fn test3() {
         let s = "你是我的小小呀小苹果";
         let chars = s.chars();
-
+        
         //assert_eq!('你', chars[1]);
         for char in chars{
             println!("{char}");
