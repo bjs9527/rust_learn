@@ -6,3 +6,4 @@ pub mod string_test;
 pub mod hash_map_test;
 pub mod trait_test;
 pub mod trait2_test;
+pub mod test_test;
